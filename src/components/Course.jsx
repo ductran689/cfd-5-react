@@ -1,12 +1,32 @@
 import React from 'react';
 
-function Course() {
+
+function check_status(status){
+if (status==='dang-dien-ra'){
+  <span className="badge b2">Đang diễn ra</span>
+} else if(status==='da-ket-thuc'){
+  <span className="badge b1">Đã kết thúc</span>
+} else{
+  <span className="badge b3">Sắp diễn ra</span>
+}
+}
+
+
+function Course({name, status, des, image, teacher_name, teacher_img} ) {
     return (
         <div className="col-md-4 course">
                   <div className="wrap">
                     <a className="cover" href="#">
-                      <img src="/img/img1.png" alt="" />
-                      <span className="badge b1">Đã kết thúc</span>
+                      <img src={image} alt="" />
+                      {
+                        check_status (status)
+                        /* status === 'dang-dien-ra' ?
+                        <span className="badge b1">Đang diễn ra</span>
+                        :( status ===' da-ket-thuc'?
+                        <span className="badge b1">Đã kết thúc</span>
+                        :  <span className="badge b1">Sắp khai giảng</span>) */
+                      }
+                     
                       <div className="hover">
                         <div className="top">
                           <div className="user">
@@ -23,18 +43,18 @@ function Course() {
                     </a>
                     <div className="info">
                       <a className="name" href="#">
-                        Front-end căn bản
+                        {name}
                       </a>
                       <p className="des">
-                        One of the best corporate fashion brands in Sydney
+                        {des}
                       </p>
                     </div>
                     <div className="bottom">
                       <div className="teacher">
                         <div className="avatar">
-                          <img src="/img/avt.png" alt="" />
+                          <img src={teacher_img} alt="" />
                         </div>
-                        <div className="name">Trần Nghĩa</div>
+                        <div className="name">{teacher_name}</div>
                       </div>
                       <div className="register-btn">Đăng Ký</div>
                     </div>
@@ -44,4 +64,4 @@ function Course() {
     );
 }
 
-export default Co
+export default Course
