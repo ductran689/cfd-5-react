@@ -1,7 +1,8 @@
 import React from 'react';
+import reactDom from 'react-dom';
 
 function Popup_login(props) {
-    return (
+    return reactDom.createPortal(
         <div className="popup-form popup-login" style={{ display: 'none' }}>
         <div className="wrap">
             {/* login-form */}
@@ -43,7 +44,10 @@ function Popup_login(props) {
                 </div>
             </div>
         </div>
-    </div>
+    </div>,
+    document.getElementById('root2')
+
+        
  
     );
 }

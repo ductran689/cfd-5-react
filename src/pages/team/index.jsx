@@ -1,9 +1,11 @@
 import React from 'react';
 import Mentor from './Mentor'
 import Members from './Members'
+import Mainlayout from '../../layout/Mainlayout';
 function index() {
     return (
-        <main class="team" id="main">
+        <>
+            <main class="team" id="main">
       <section>
             <div className="container">
                 <div className="top">
@@ -31,7 +33,9 @@ function index() {
         </section>
    
         </main>
-   );
+  
+        </>
+         );
 }
 
 export default index;

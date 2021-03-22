@@ -3,7 +3,7 @@ import Tab4_item from './Tab4_item';
 
 function Tab4(props) {
     return (
-        <div className="tab4" style={{ display: 'none' }}>
+        <div className="tab4" >
           <Tab4_item name='' date='' money='' />
           <Tab4_item name='' date='' money='' />
           <Tab4_item name='' date='' money='' />

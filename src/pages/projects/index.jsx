@@ -1,7 +1,9 @@
 import React from 'react';
+import Mainlayout from '../../layout/Mainlayout';
 import Project_content from './Project_content'
 function Project(props) {
     return (
+      <>
         <main className="projectpage" id="main">
         <section className="section-1">
           <div className="container">
@@ -28,7 +30,9 @@ function Project(props) {
           </div>
         </section>
       </main>
-    );
+    
+      </>
+        );
 }
 
 export default Project;

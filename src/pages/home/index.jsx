@@ -7,11 +7,12 @@ import Testimonial from './components/testimonial/Testimonial'
 import Gallery from './components/Gallery'
 import Action from './components/Action'
 import Popup_video from'./components/Popup_video'
-import Popup_login from'./components/Popup_login'
+import Popup_login from'../../components/Popup_login'
 import Popup_register from './components/Popup_register'
+import Mainlayout from '../../layout/Mainlayout'
 function Home() {
     return (
-        <div>
+        <>
 
             <main className="homepage" id="main">
                 <Banner />
@@ -28,7 +29,7 @@ function Home() {
             <Popup_video/>
             <Popup_login/>
             <Popup_register/>
-        </div>
+        </>
     );
 }
 

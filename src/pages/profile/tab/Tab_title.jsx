@@ -1,13 +1,16 @@
 import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
 
-function Tab_title({acc, course, pro, his, manage}) {
+
+function Tab_title({url}) {
+  
     return (
         <div className="tab-title">
-        <a href="#" className="active">{acc}</a>
-        <a href="#">{course}</a>
-        <a href="#">{pro}</a>
-        <a href="#">{his}</a>
-        <a href="#">{manage}</a>
+        <NavLink exact to={url}>Thông tin tài khoản</NavLink> {/* nhớ để ý exact khi xử lý Navlink để gắn class active cho thẻ tag */}
+        <NavLink to={url+'/course'}>Khóa học của bạn</NavLink>
+        <NavLink to={url+'/project'}>Dự án đã làm</NavLink>
+        <NavLink to={url+'/history-payment'}>Lịch sử thanh toán</NavLink>
+        <NavLink to={url+'/coin'}>Quản lý COIN của tôi</NavLink>
       </div>
       
     );

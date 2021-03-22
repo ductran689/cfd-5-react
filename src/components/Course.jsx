@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 function check_status(status){
@@ -13,6 +14,10 @@ if (status==='dang-dien-ra'){
 
 
 function Course({name, status, des, image, teacher_name, teacher_img} ) {
+
+ 
+
+
     return (
         <div className="col-md-4 course">
                   <div className="wrap">
@@ -56,7 +61,7 @@ function Course({name, status, des, image, teacher_name, teacher_img} ) {
                         </div>
                         <div className="name">{teacher_name}</div>
                       </div>
-                      <div className="register-btn">Đăng Ký</div>
+                      <Link className="register-btn" to='/register'>Đăng Ký</Link>
                     </div>
                   </div>
                   </div>

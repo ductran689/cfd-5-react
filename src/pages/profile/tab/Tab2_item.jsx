@@ -4,7 +4,7 @@ function Tab2_item({name,date, hours, videos, members}) {
     return (
         <div className="item">
             <div className="cover">
-              <img src="img/img3.png" alt="" />
+              <img src="/img/img3.png" alt="" />
             </div>
             <div className="info">
               <a href="#" className="name">
@@ -13,13 +13,13 @@ function Tab2_item({name,date, hours, videos, members}) {
               <div className="date">date</div>
               <div className="row">
                 <div className>
-                  <img src="img/clock.svg" alt="" className="icon" />{hours}
+                  <img src="/img/clock.svg" alt="" className="icon" />{hours}
                   </div>
                 <div className>
-                  <img src="img/play.svg" alt="" className="icon" />{videos}
+                  <img src="/img/play.svg" alt="" className="icon" />{videos}
                   </div>
                 <div className>
-                  <img src="img/user.svg" alt="" className="icon" />{members}
+                  <img src="/img/user.svg" alt="" className="icon" />{members}
                   </div>
               </div>
               <div className="process">

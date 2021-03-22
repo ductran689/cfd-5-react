@@ -1,6 +1,6 @@
 import React from 'react';
 import Accordion_wrap from './Accordion_wrap'
-function faq(props) {
+function Faq(props) {
     return (
         <main className="faqpage" id="main">
         <div className="container">
@@ -16,4 +16,4 @@ function faq(props) {
     );
 }
 
-export default faq;
+export default Faq;

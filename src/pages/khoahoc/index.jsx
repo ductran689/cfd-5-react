@@ -1,8 +1,10 @@
 import React from 'react';
 import Course from '../../components/Course'
+import Mainlayout from '../../layout/Mainlayout';
 function Khoahoc(props) {
     return (
-        <main className="homepage" id="main">
+        <>
+            <main className="homepage" id="main">
             <section className="section-1">
                 <div className="container">
                     <h2 className="main-title">KHÓA HỌC CFD</h2>
@@ -16,13 +18,13 @@ function Khoahoc(props) {
                         <h2 className="main-title">ONLINE</h2>
                     </div>
                     <div className="list row">
-                        <Course name='reactjs' status='dang-dien-ra' des='' image='' teacher_name='' teacher_img='' slug />
-                        <Course name='html' status='da-ket-thuc' des='' image='' teacher_name='' teacher_img='' slug />
-                        <Course name='css' status='' des='' image='' teacher_name='' teacher_img='' slug />
-                        <Course name='scss' status='da-ket-thuc' des='' image='' teacher_name='' teacher_img='' slug />
-                        <Course name='java' status='' des='' image='' teacher_name='' teacher_img='' slug />
-                        <Course name='angular' status='' des='' image='' teacher_name='' teacher_img='' slug />
-                        <Course name='python' status='' des='' image='' teacher_name='' teacher_img='' slug /></div>
+                        <Course name='reactjs' status='dang-dien-ra' des='' image='/img/img1.png' teacher_name='' teacher_img='' slug />
+                        <Course name='html' status='da-ket-thuc' des='' image='/img/img5.png' teacher_name='' teacher_img='' slug />
+                        <Course name='css' status='' des='' image='/img/img4.png' teacher_name='' teacher_img='' slug />
+                        <Course name='scss' status='da-ket-thuc' des='' image='/img/img3.png' teacher_name='' teacher_img='' slug />
+                        <Course name='java' status='' des='' image='/img/img2.png' teacher_name='' teacher_img='' slug />
+                        <Course name='angular' status='' des='' image='/img/img1.png' teacher_name='' teacher_img='' slug />
+                        <Course name='python' status='' des='' image='/img/img.png' teacher_name='' teacher_img='' slug /></div>
                 </div>
             </section>
             <section className="section-2 section-blue">
@@ -32,15 +34,20 @@ function Khoahoc(props) {
                         <h2 className="main-title">OFFLINE</h2>
                     </div>
                     <div className="list row">
-                        <Course name='reactjs' status='dang-dien-ra' des='' image='' teacher_name='' teacher_img='' slug />
-                        <Course name='html' status='da-ket-thuc' des='' image='' teacher_name='' teacher_img='' slug />
-                        <Course name='css' status='' des='' image='' teacher_name='' teacher_img='' slug />
+                        <Course name='reactjs' status='dang-dien-ra' des='' image='/img/img.png' teacher_name='' teacher_img='' slug />
+                        <Course name='html' status='da-ket-thuc' des='' image='/img/img1.png' teacher_name='' teacher_img='' slug />
+                        <Course name='css' status='' des='' image='/img/img2.png' teacher_name='' teacher_img='' slug />
+                        <Course name='css' status='' des='' image='/img/img3.png' teacher_name='' teacher_img='' slug />
+                        <Course name='css' status='' des='' image='/img/img4.png' teacher_name='' teacher_img='' slug />
+                        <Course name='css' status='' des='' image='/img/img1.png' teacher_name='' teacher_img='' slug />
                     </div>
                     <div className="text-deco">C</div>
                 </div>
             </section>
         </main>
-    );
+    
+        </>
+        );
 }
 
 export default Khoahoc;

@@ -4,7 +4,7 @@ import Coin_info from './Coin_info';
 
 function Tab5(props) {
     return (
-        <div className="tab5 cointab" style={{ display: 'block' }}>
+        <div className="tab5 cointab" >
           <Coin_info/>
           <Coin_his/>
         </div>

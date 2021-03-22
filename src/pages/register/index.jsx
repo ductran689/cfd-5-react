@@ -1,8 +1,10 @@
 import React from 'react';
 import Main_info from './Main_info'
 import Form from '../../components/Form'
+import Mainlayout from '../../layout/Mainlayout';
 function Register() {
     return (
+      <>
         <main className="register-course" id="main">
         <section>
           <div className="container">
@@ -26,7 +28,9 @@ function Register() {
             <a href="/" class="btn main rect">về trang chủ</a>
         </div> */}
       </main>
-    );
+    
+      </>
+        );
 }
 
 export default Register;

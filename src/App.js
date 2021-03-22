@@ -1,15 +1,16 @@
-import Home from "./pages/home";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Team from './pages/team'
+
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+
+import './asset/css/custom.css'
+import renderRouter from "./core/routerConfig";
+import routers from "./routers";
 function App() {
   return (
-    <>
-      <Header />
-     {/*  <Home /> */}
-     <Team/>
-      <Footer />
-      </>
+    <BrowserRouter>
+      
+    {renderRouter(routers)}
+       
+    </BrowserRouter>
   );
 }
 

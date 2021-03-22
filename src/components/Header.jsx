@@ -1,11 +1,20 @@
 import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
 
 function Header() {
+
+  function openMenu(){
+    document.body.classList.toggle('menu-is-show')
+  }
+  function closeMenu(){
+    document.body.classList.remove('menu-is-show')
+    
+  }
     return (
       <>
        <header id="header">
           <div className="wrap">
-            <div className="menu-hambeger">
+            <div className="menu-hambeger" onClick={openMenu}>
               <div className="button">
                 <span />
                 <span />
@@ -13,11 +22,11 @@ function Header() {
               </div>
               <span className="text">menu</span>
             </div>
-            <a href="#" className="logo">
+            <Link to="/" className="logo">
               <img src="/img/logo.svg" alt="" />
               <h1>CFD</h1>
-            </a>
-            <div className="right">
+            </Link>
+         <div className="right">
               <div className="have-login">
                 <div className="account">
                   <a href="#" className="info">
@@ -39,33 +48,35 @@ function Header() {
                     <a href="#" class="btn-register">Đăng nhập</a>
                     <a href="login.html" class="btn main btn-open-login">Đăng ký</a>
                 </div> */}
+                
             </div>
           </div>
         </header>
         <nav className="nav">
           <ul>
             <li className="li_login">
-              <a href="#">Đăng nhập</a>
-              <a href="#">Đăng ký</a>
+              
+              <Link href="#">Đăng nhập</Link>
+              <Link href="#">Đăng ký</Link>
             </li>
-            <li className="active">
-              <a href="#">Trang chủ</a>
-            </li>
-            <li>
-              <a href="#">CFD Team</a>
+            <li >
+              <NavLink exact onClick={closeMenu} to="/">Trang chủ</NavLink> {/* phải để exact nếu ko nó sẽ auto active trang chủ */}
             </li>
             <li>
-              <a href="#">Khóa Học</a>
+              <NavLink  onClick={closeMenu} to="/team">CFD Team</NavLink>
             </li>
             <li>
-              <a href="#">Dự Án</a>
+              <NavLink  onClick={closeMenu} to="/khoahoc">Khóa Học</NavLink>
             </li>
             <li>
-              <a href="#">Liên hệ</a>
+              <NavLink  onClick={closeMenu} to="/projects">Dự Án</NavLink>
+            </li>
+            <li>
+              <NavLink  onClick={closeMenu} to="/contact">Liên hệ</NavLink>
             </li>
           </ul>
         </nav>
-        <div className="overlay_nav" />
+        <div className="overlay_nav"  onClick={closeMenu} />
       </>
     );
 }
